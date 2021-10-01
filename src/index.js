@@ -18,8 +18,8 @@ function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null))
   const [isPlayerOnesTurn , setIsPlayerOnesTurn] = useState(true)
 
-  const playerOneName = 'Jason'
-  const playerTwoName = 'Derek'
+  const [playerOneName, setPlayerOneName] = useState('none yet')
+  const [playerTwoName, setPlayerTwoName] = useState('none yet')
 
   const [currentPlayerName, setCurrentPlayerName] = useState(playerOneName)
 
@@ -46,6 +46,10 @@ function Board() {
     }
   }
 
+  const updatePlayerName = (i) => (e) => {
+    i === 0 ? setPlayerOneName(e.target.value) : setPlayerTwoName(e.target.value)
+  }
+
   function renderSquare(i) {
     
     return <Square
@@ -64,7 +68,10 @@ function Board() {
 
   return (  
     <div>
+      <div className="status">Enter first player name:<input name="playerOne" onChange={updatePlayerName(0)}/></div>
       <div className="status">Player 1:{playerOneName}</div>
+
+      <div className="status">Enter second player name:<input name="playerTwo" onChange={updatePlayerName(1)}/></div>
       <div className="status">Player 2:{playerTwoName}</div>
 
       <div className="status">Up now:{currentPlayerName}</div>
