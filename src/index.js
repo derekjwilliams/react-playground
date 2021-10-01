@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function Square({ value, onClick }) {
+function Square({ value, makeMove }) {
 
   return (
     <button className="square"
-      onClick={onClick}
+      onClick={makeMove}
     >
       {value}
     </button>
@@ -16,7 +16,12 @@ function Square({ value, onClick }) {
 function Board() {
 
   const [squares, setSquares] = useState(Array(9).fill(null))
-  const [isXPlayersTurn , setIsXPlayersTurn] = useState(true)
+  const [isPlayerOnesTurn , setIsPlayerOnesTurn] = useState(true)
+
+  const playerOneName = 'Jason'
+  const playerTwoName = 'Derek'
+
+  const [currentPlayerName, setCurrentPlayerName] = useState(playerOneName)
 
   const gameOver = (s) => {
     const isWinningCombination = (line) => {
@@ -45,21 +50,25 @@ function Board() {
     
     return <Square
       value={squares[i]}
-      onClick={ 
+      makeMove={ 
         () => {
           const nextSquares = squares.slice()
-          nextSquares[i] = isXPlayersTurn ? 'x' : 'o'
-          setIsXPlayersTurn(!isXPlayersTurn)
+          nextSquares[i] = isPlayerOnesTurn ? 'x' : 'o'
+          setIsPlayerOnesTurn(!isPlayerOnesTurn)
           setSquares(nextSquares)
+          setCurrentPlayerName(!isPlayerOnesTurn ? playerOneName : playerTwoName)
           gameOver(nextSquares)
         }
       } />;
   }
-  const status = 'Next player: Zedx';
 
-  return (
+  return (  
     <div>
-      <div className="status">{status}</div>
+      <div className="status">Player 1:{playerOneName}</div>
+      <div className="status">Player 2:{playerTwoName}</div>
+
+      <div className="status">Up now:{currentPlayerName}</div>
+
       <div className="board-row">
         {renderSquare(0)}
         {renderSquare(1)}
