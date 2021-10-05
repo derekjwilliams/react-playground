@@ -69,6 +69,6 @@ Once the Chrome browser window is displayed the Chrome Developer tools are displ
 
 Finally, the navigation to the source code in the Chrome Developer tools is demonstrated.
 
-https://user-images.githubusercontent.com/91456/136074173-6b332980-0206-43c4-a489-780731cb49f5.mov
+https://user-images.githubusercontent.com/91456/136074173-6b332980-0206-43c4-a489-780731cb49f5.mov&s=1920
 
 
