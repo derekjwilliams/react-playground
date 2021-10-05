@@ -59,7 +59,15 @@ Which needs to be run in the application directory.  Restarting Metro is **not**
 
 ### iOS Simulator Debugging
 
-Zoom in three levels (e.g. CMD+, CMD+, CMD+ to see in full resolution (1920 x 1200)
+*Hint: Zoom in a few levels (e.g. CMD+, CMD+, CMD+) to see in full resolution (1920 x 1200).
+
+The following shows the terminals used to start Metro and the application, and the subsequent iPhone 13 simulator.
+
+In the iPhone Simulator `Cmd + D` is pressed to show the Chrome browser window for debugging, brought in from lower right (previously configured as defaut using `defaultbrowser chrome`).  
+
+Once the Chrome browser window is displayed the Chrome Developer tools are displayed using `⌘⌥I`.  
+
+Finally, the navigation to the source code in the Chrome Developer tools is demonstrated.
 
 https://user-images.githubusercontent.com/91456/136074173-6b332980-0206-43c4-a489-780731cb49f5.mov
 
