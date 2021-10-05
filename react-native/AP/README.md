@@ -59,7 +59,7 @@ Which needs to be run in the application directory.  Restarting Metro is **not**
 
 ### iOS Simulator Debugging
 
-
+Zoom in three levels (e.g. CMD+, CMD+, CMD+ to see in full resolution (1920 x 1200)
 
 https://user-images.githubusercontent.com/91456/136074173-6b332980-0206-43c4-a489-780731cb49f5.mov
 
