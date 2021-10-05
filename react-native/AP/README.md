@@ -39,7 +39,18 @@ Then run Metro and debug
 
 ## Errors
 
-### *Runtime is not ready for debugging - Make sure Metro is Running...*
+### iOS Error: *Runtime is not ready for debugging - Make sure Metro is Running...*
 
 Go to the Metro terminal window and press `r`
 
+## Android Error: *Console Warning: Debugger and device times...
+
+The message continues 
+
+```corect this by running adb shell "date \`date + %m%d%H%M%Y.%S\`"*```
+
+This correction does not work on MacOS, the correct fix is
+
+`adb shell su root date $(date +%m%d%H%M%Y.%S)`
+
+Which needs to be run in the application directory.  Restarting Metro is **not** required.  Double tap **R** in the Android simulator to reload.
