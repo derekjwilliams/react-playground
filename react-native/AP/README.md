@@ -59,7 +59,7 @@ Which needs to be run in the application directory.  Restarting Metro is **not**
 
 ### iOS Simulator Debugging
 
-*Hint: Zoom in a few levels (e.g. CMD+, CMD+, CMD+) to see in full resolution (1920 x 1200).
+*Hint: Zoom in a few levels (e.g. CMD+, CMD+, CMD+) to see in full resolution (1920 x 1200).*
 
 The following shows the terminals used to start Metro and the application, and the subsequent iPhone 13 simulator.
 
