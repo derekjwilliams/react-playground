@@ -54,3 +54,13 @@ This correction does not work on MacOS, the correct fix is
 `adb shell su root date $(date +%m%d%H%M%Y.%S)`
 
 Which needs to be run in the application directory.  Restarting Metro is **not** required.  Double tap **R** in the Android simulator to reload.
+
+## Videos
+
+### iOS Simulator Debugging
+
+
+
+https://user-images.githubusercontent.com/91456/136074173-6b332980-0206-43c4-a489-780731cb49f5.mov
+
+
