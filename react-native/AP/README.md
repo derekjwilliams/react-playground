@@ -51,7 +51,7 @@ When running Android emulator the following warning may be displayed:
 
 The suggestion of correcting the discrepancy by running:
 
-`adb shell "date \`date + %m%d%H%M%Y.%S\`"*`
+```adb shell "date \`date + %m%d%H%M%Y.%S\`"```
 
 does not work on MacOS, the correct fix is
 
