@@ -43,7 +43,7 @@ Then run Metro and debug
 
 Go to the Metro terminal window and press `r`
 
-## Android Error: *Console Warning: Debugger and device times...
+## Android Error: *Console Warning: Debugger and device times...*
 
 The message continues 
 
