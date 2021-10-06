@@ -45,11 +45,15 @@ Go to the Metro terminal window and press `r`
 
 ## Android Error: *Console Warning: Debugger and device times...*
 
-The message continues 
+When running Android emulator the following warning may be displayed:
 
-```corect this by running adb shell "date \`date + %m%d%H%M%Y.%S\`"*```
+![Screen Shot 2021-10-06 at 12 14 02 PM](https://user-images.githubusercontent.com/91456/136260170-f22115ac-d498-4487-b576-8b39ee90c4ab.png)
 
-This correction does not work on MacOS, the correct fix is
+The suggestion of correcting the discrepancy by running:
+
+`adb shell "date \`date + %m%d%H%M%Y.%S\`"*`
+
+does not work on MacOS, the correct fix is
 
 `adb shell su root date $(date +%m%d%H%M%Y.%S)`
 
