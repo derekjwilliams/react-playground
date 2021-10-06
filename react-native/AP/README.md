@@ -76,3 +76,17 @@ Finally, the navigation to the source code in the Chrome Developer tools is demo
 ![](https://user-images.githubusercontent.com/91456/136074173-6b332980-0206-43c4-a489-780731cb49f5.mov?s=200)
 
 
+
+### Android Simulator Debugging
+
+![](https://user-images.githubusercontent.com/91456/136262440-cfb204cd-30a0-46f2-af07-c2aa1e5c6b8a.mov?s=200)
+
+he following shows the terminals used to start Metro and the application, and the subsequent Pixel 3a simulator.
+
+In the Pixel Simulator `Cmd + M` is pressed to show the development menu, then `Debug` ia selected to show the Chrome browser window for debugging, brought in from lower right (previously configured as defaut using `defaultbrowser chrome`).  
+
+Once the Chrome browser window is displayed the Chrome Developer tools are displayed using `⌘⌥I`.  
+
+Finally, the navigation to the source code in the Chrome Developer tools is demonstrated.
+
+![](https://user-images.githubusercontent.com/91456/136074173-6b332980-0206-43c4-a489-780731cb49f5.mov?s=200)
