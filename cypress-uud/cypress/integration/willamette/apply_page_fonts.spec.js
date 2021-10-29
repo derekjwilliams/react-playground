@@ -24,7 +24,7 @@ function styleInPage(css, verbose){
     return values;
 }
 
-describe('Check Willamette Home Page', () => {
+describe('Check Willamette Apply Page Font: Family, Style, and Transforms', () => {
     beforeEach(() => {
     cy.visit('https://willamette.edu/admission/apply-now/index.html')
   })
