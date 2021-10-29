@@ -7,7 +7,7 @@ describe('Check Willamette Home Page', () => {
     cy.get('.card').should('not.to.match', ':empty') //TODO just an example, not a good one
     cy.get('.card').each((card) => {
       debugger
-      simpleNavCard() //TODO pass card to simpleNavCard spec
+      simpleNavCard(card) //TODO pass card to simpleNavCard spec
     })
   })
 })
