@@ -29,19 +29,22 @@ describe('Check Willamette Apply Page Font: Family, Style, and Transforms', () =
     cy.visit('https://willamette.edu/admission/apply-now/index.html')
   })
   it('Check Typograpy', () => {
+    let fontStyles = new Set()
     cy.wait(1000)
     debugger
     cy.get('body')
     .find('*')
-    .each(($item) =>
+    .each((element) =>
 //    const nodes= cy.get('#siteContent').each(($item) =>
 //    cy.get('').each(($item) =>
     {
-      let fontFamily = getComputedStyle($item[0])['fontFamily']
-      let textTransform = getComputedStyle($item[0])['textTransform']
+      let fontFamily = getComputedStyle(element[0])['fontFamily']
+      let textTransform = getComputedStyle(element[0])['textTransform']
+      let fontStyle = {family : fontFamily, transform: textTransform}
+      fontStyles.add(JSON.stringify(fontStyle))
       // debugger
-      cy.log('fontFamily', fontFamily)
-      cy.log('textTransform', textTransform)
+      cy.log('fontStyle size: ', fontStyles.size)
+      //cy.log('textTransform', textTransform)
     })
 //     cy.log('length', JSON.stringify(nodes.length))
 //     //document.getElementsByClassName('card')
