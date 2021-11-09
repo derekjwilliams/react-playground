@@ -31,20 +31,28 @@ describe('Check Willamette Apply Page Font: Family, Style, and Transforms', () =
   it('Check Typograpy', () => {
     cy.wait(1000)
     debugger
-    const nodes= cy.get('#siteContent').each(($item) =>
+    cy.get('body')
+    .find('*')
+    .each(($item) =>
+//    const nodes= cy.get('#siteContent').each(($item) =>
+//    cy.get('').each(($item) =>
     {
-      debugger
-      cy.log('here')
+      let fontFamily = getComputedStyle($item[0])['fontFamily']
+      let textTransform = getComputedStyle($item[0])['textTransform']
+      // debugger
+      cy.log('fontFamily', fontFamily)
+      cy.log('textTransform', textTransform)
     })
-    cy.log('length', JSON.stringify(nodes.length))
-    //document.getElementsByClassName('card')
+//     cy.log('length', JSON.stringify(nodes.length))
+//     //document.getElementsByClassName('card')
 
-    for (let i = 0; i < nodes.length; i++) {
-    const fontFamily = getComputedStyle(nodes[i], '')['fontFamily']
-    cy.log('node 0 style', JSON.stringify(fontFamily, null, 2))
-//    cy.log('nodes in test', JSON.stringify(nodes, null, 2))
+//     for (let i = 0; i < nodes.length; i++) {
+//       debugger
+//       const fontFamily = getComputedStyle(nodes[i], '')['fontFamily']
+//       cy.log('node 0 style', JSON.stringify(fontFamily, null, 2))
+// //    cy.log('nodes in test', JSON.stringify(nodes, null, 2))
 
-    }
+//     }
 
 //    const styles = styleInPage('fontFamily')
   //  cy.log(JSON.stringify(styles, null, 2))
